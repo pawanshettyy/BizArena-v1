@@ -23,8 +23,8 @@ interface RulesDialogProps {
 export function RulesDialog({ open, onAccept, onCancel }: RulesDialogProps) {
   return (
     <AlertDialog open={open}>
-      <AlertDialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
-        <AlertDialogHeader>
+      <AlertDialogContent className="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
+        <AlertDialogHeader className="flex-shrink-0">
           <AlertDialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             BizArena Competition Rules
           </AlertDialogTitle>
@@ -33,7 +33,7 @@ export function RulesDialog({ open, onAccept, onCancel }: RulesDialogProps) {
           </AlertDialogDescription>
         </AlertDialogHeader>
         
-        <ScrollArea className="h-[500px] pr-4">
+        <ScrollArea className="flex-1 min-h-0 pr-4">
           <div className="space-y-6 text-sm">
             {/* Competition Structure */}
             <section>
@@ -166,7 +166,7 @@ export function RulesDialog({ open, onAccept, onCancel }: RulesDialogProps) {
           </div>
         </ScrollArea>
 
-        <AlertDialogFooter>
+        <AlertDialogFooter className="flex-shrink-0">
           <AlertDialogCancel onClick={onCancel}>
             Cancel Registration
           </AlertDialogCancel>
